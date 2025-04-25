@@ -1,16 +1,5 @@
-interface IProduct {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  discountPercentage: number;
-  rating: number;
-  stock: number;
-  brand: string;
-  category: string;
-  thumbnail: string;
-  images: string[];
-}
+import './Products.css';
+import { IProduct } from '../types/IProduct.ts';
 
 interface ProductsProps {
   products: IProduct[];
@@ -18,14 +7,17 @@ interface ProductsProps {
 
 export function Products({ products }: ProductsProps) {
   return (
-    <main>
+    <main className="products">
       <ul>
-        {products.map((product) => (
+        {products.slice(0, 10).map((product) => (
           <li key={product.id}>
             <img src={product.thumbnail} alt={product.title} />
-            <div> {product.title} </div>
             <div>
-              <button> 🛒 </button>
+              {' '}
+              {product.title} - ${product.price}
+            </div>
+            <div>
+              <button> 🛒</button>
             </div>
           </li>
         ))}
