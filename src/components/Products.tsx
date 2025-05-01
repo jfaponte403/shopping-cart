@@ -1,4 +1,3 @@
-import './Products.css';
 import { IProduct } from '../types/IProduct.ts';
 
 interface ProductsProps {
@@ -6,6 +5,8 @@ interface ProductsProps {
 }
 
 export function Products({ products }: ProductsProps) {
+
+
   return (
     <main className="products">
       <ul>

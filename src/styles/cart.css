@@ -1,0 +1,40 @@
+.cart-button {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cart-button:hover {
+    background-color: #0056b3;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 70px;
+    right: 16px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-panel h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.cart-panel p {
+    margin: 10px 0 0;
+}
