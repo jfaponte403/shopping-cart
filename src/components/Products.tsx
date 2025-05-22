@@ -1,5 +1,5 @@
 import { IProduct } from '../types/IProduct.ts';
-import { useCartContext } from '../context/cart.tsx';
+import { useCartContext } from '../context/cartContext.tsx';
 
 interface ProductsProps {
   products: IProduct[];
