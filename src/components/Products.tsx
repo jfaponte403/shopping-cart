@@ -1,4 +1,5 @@
 import { IProduct } from '../types/IProduct.ts';
+import { useCartContext } from '../context/cart.tsx';
 
 interface ProductsProps {
   products: IProduct[];
@@ -6,6 +7,7 @@ interface ProductsProps {
 
 export function Products({ products }: ProductsProps) {
 
+  const { addToCart } = useCartContext();
 
   return (
     <main className="products">
@@ -14,11 +16,18 @@ export function Products({ products }: ProductsProps) {
           <li key={product.id}>
             <img src={product.thumbnail} alt={product.title} />
             <div>
-              {' '}
               {product.title} - ${product.price}
             </div>
             <div>
-              <button> 🛒</button>
+              <button
+                onClick={() => {
+                  console.log(product);
+                  addToCart(product);
+                }}
+              >
+                {' '}
+                🛒
+              </button>
             </div>
           </li>
         ))}
