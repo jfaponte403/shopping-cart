@@ -21,7 +21,6 @@ export function Products({ products }: ProductsProps) {
             <div>
               <button
                 onClick={() => {
-                  console.log(product);
                   addToCart(product);
                 }}
               >

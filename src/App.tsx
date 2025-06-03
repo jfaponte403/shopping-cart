@@ -5,13 +5,13 @@ import { products } from './mocks/products.json';
 import { CartContextProvider } from './context/cartContext.tsx';
 
 function App() {
-  const { filterProducts } = useFilters();
+  const { filterProducts, setFilters } = useFilters();
   const productsFiltered = filterProducts(products);
 
   return (
     <>
       <CartContextProvider>
-        <Header />
+        <Header onFilterChange={setFilters} />
         <Products products={productsFiltered} />
       </CartContextProvider>
     </>
